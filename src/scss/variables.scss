@@ -1,0 +1,30 @@
+//colors
+$grayMain: #1c2a39;
+$graySub: #5C6A79;
+$grayLight: #EFEEF6;
+
+$whiteMain: #ffffff;
+
+$purpleMain: #534FD2;
+$purpleLight: #9E98DC;
+$purpleHover: #cbc6f1;
+
+//mixins
+@mixin fontFamily {
+    font-family: "Montserrat", sans-serif;
+}
+
+@mixin secondFamily {
+    font-family: "Open Sans", sans-serif;
+}
+
+@mixin flexCenter {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fontStyle($fontSize, $fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}

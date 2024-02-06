@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,900&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Bookshop</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Bookshop </h1>
+    <nav class="header__nav">
+      <ul class="header-list">
+        <li class="header-list__item active">books</li>
+        <li class="header-list__item">audiobooks</li>
+        <li class="header-list__item">Stationery & gifts</li>
+        <li class="header-list__item">blog</li>
+      </ul>
+    </nav>
+    <div class="header__menu">
+      <button class="header__profile"></button>
+      <button class="header__search"></button>
+      <button class="header__cart"></button>
+    </div>
+  </header>
+  <main>
+    <div class="slider">
+      <div class="slider-block" data-index="1">
+        <img class="slider-block__img" src="./src/assets/images/banner_1.png" alt="banner">
+        <h2 class="slider-block__subtitle">Black friday sale</h3>
+        <h1 class="slider-block__title">up to</h1>
+        <h1 class="slider-block__title accent">60</h1>
+          <h1 class="slider-block__title percent">%</h1>
+      </div>
+      <div class="slider-block disabled" data-index="2">
+        <img class="slider-block__img" src="./src/assets/images/banner_1.png" alt="banner">
+        <h2 class="slider-block__subtitle">Black friday sale</h3>
+        <h1 class="slider-block__title">up to</h1>
+        <h1 class="slider-block__title accent">0</h1>
+        <h1 class="slider-block__title percent">%</h1>
+      </div>
+      <div class="slider-block disabled" data-index="3">
+        <img class="slider-block__img" src="./src/assets/images/banner_1.png" alt="banner">
+        <h2 class="slider-block__subtitle">Black friday sale</h3>
+        <h1 class="slider-block__title">up to</h1>
+        <h1 class="slider-block__title accent">0060</h1>
+        <h1 class="slider-block__title percent">%</h1>
+      </div>
+      <div class="slider-dots">
+        <div class="slider-dots__dot active" data-index="1"></div>
+        <div class="slider-dots__dot" data-index="2"></div>
+        <div class="slider-dots__dot" data-index="3"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
