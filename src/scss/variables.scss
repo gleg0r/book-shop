@@ -9,6 +9,8 @@ $purpleMain: #534FD2;
 $purpleLight: #9E98DC;
 $purpleHover: #cbc6f1;
 
+$pinkColor: #FF8FE6;
+
 //mixins
 @mixin fontFamily {
     font-family: "Montserrat", sans-serif;
@@ -27,4 +29,15 @@ $purpleHover: #cbc6f1;
 @mixin fontStyle($fontSize, $fontWeight) {
     font-size: $fontSize;
     font-weight: $fontWeight;
+}
+
+@mixin promoStyle($height, $color) {
+    position: absolute;
+    z-index: 1;
+    height: $height;
+    background: $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
 }

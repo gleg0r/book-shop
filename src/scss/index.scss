@@ -115,15 +115,6 @@ main {
   }    
 }
 
-@keyframes disappearing {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20000px);
-  }    
-}
-
 .slider {
   display: flex;
   justify-content: center;
@@ -132,6 +123,7 @@ main {
   width: 1440px;
   height: fit-content;
   gap: 17px;
+  position: relative;
   &-block {
     width: 100%;
     @include flexCenter;
@@ -208,6 +200,44 @@ main {
       &.active {
         background-color: $purpleLight;
       }
+    }
+  }
+  &-promo {
+    &__purple {
+      @include promoStyle(164px, $purpleLight);
+      top: 81px;
+      right: 74px;
+    }
+    &__rose {
+      @include promoStyle(233px, $pinkColor);
+      top: 361px;
+      right: 0;
+      padding-right: 47px;
+      padding-left: 21px;
+    }
+    &__title {
+      color: rgb(28, 42, 57);
+      @include fontFamily;
+      @include fontStyle(18px, 700);
+      line-height: 22px;
+      letter-spacing: 0%;
+      text-align: left;
+      text-transform: uppercase;
+      width: 109px;
+      &-pink {
+        color: rgb(28, 42, 57);
+        @include fontFamily;
+        @include fontStyle(18px, 700);
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: uppercase;
+        width: 69px;
+      }
+    }
+    &__arrow {
+      width: 55px;
+      height: 12px;
     }
   }
 }
