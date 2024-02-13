@@ -8,4 +8,4 @@ const sliderBlock = document.querySelectorAll('.slider-block');
 const slider = new Slider(sliderDots, sliderBlock);
 
 slider.initDots();
-//slider.sliderInterval();
+slider.sliderInterval();

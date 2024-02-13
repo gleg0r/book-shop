@@ -108,7 +108,7 @@ main {
 
 @keyframes appearing {
   0% {
-      transform: translateX(20000px);
+      transform: translateX(5000px);
   }
   100% {
     transform: translateX(0px);
@@ -149,6 +149,14 @@ main {
       position: absolute;
       top: 69px;
       text-shadow: 0px 4px 3px rgba(28, 42, 57, 0.3);
+      &.n2 {
+        top: 240px;
+        right: 230px;
+      }
+      &.n3 {
+        font-size: 45px;
+        top: 150px;
+      }
     }
 
     &__title {
@@ -160,7 +168,20 @@ main {
       position: absolute;
       top: 106px;
       margin-right: 338px;
-
+      &.n2 {
+        top: 71px;
+        left: 271px;
+        margin-right: 0;
+      }
+      &.n3 {
+        font-size: 90px;
+        text-shadow: 6px 5px 0px $redColor;
+        width: 644px;
+        text-align: center;
+        text-transform: uppercase;
+        top: 213px;
+        left: 400px;
+      }
       &.accent {
         @include fontFamily;
         @include fontStyle(182px, 900);
@@ -170,12 +191,22 @@ main {
         margin-right: 0;
         top: 79px;
         margin-left: 73px;
+        &.n2 {
+          font-size: 160px;
+          top: 109px;
+          margin-left: 0;
+        }
       }
 
       &.percent {
         top: 200px;
         margin-right: 0;
         margin-left: 406px;
+        &.n2 {
+          top: 200px;
+          margin-right: 0;
+          margin-left: 190px;
+        }
       }
     }
   }
