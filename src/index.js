@@ -1,6 +1,7 @@
 import './scss/index.scss';
 import '../index.html';
 import Slider from './js/slider';
+import GenreList from './js/genreList';
 
 const sliderDots = document.querySelector('.slider-dots');
 const sliderBlock = document.querySelectorAll('.slider-block');

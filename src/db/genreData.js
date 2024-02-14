@@ -1,0 +1,18 @@
+export const genreData = ({
+  Architecture: 'Architecture',
+  ArtFashion: 'Art & Fashion',
+  Biography: 'Biography',
+  Business: 'Business',
+  CraftsHobbies: 'Crafts & Hobbies',
+  Drama: 'Drama',
+  Fiction: 'Fiction',
+  FoodDrink: 'Food & Drink',
+  HealthWellbeing: 'Health & Wellbeing',
+  HistoryPolitics: 'History & Politics',
+  Humor: 'Humor',
+  Poetry: 'Poetry',
+  Psychology: 'Psychology',
+  Science: 'Science',
+  Technology: 'Technology',
+  TravelMaps: 'Travel & Maps',
+});
