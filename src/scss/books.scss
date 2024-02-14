@@ -1,6 +1,48 @@
 @import './variables.scss';
 
 .books {
+    position: relative;
     max-width: 1440px;
-    padding: 105px 0px 96px 160px;
+    padding: 105px 89px 96px 160px;
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        padding: 45px 89px 50px 165px;
+        &__item {
+            @include fontFamily;
+            @include fontStyle(12px, 500);
+            color: $graySub;
+            line-height: 15px;
+            letter-spacing: 0%;
+            text-align: left;
+            text-transform: capitalize;
+            transition: .3s;
+            cursor: pointer;
+            &.active {
+                @include fontStyle(16px, 700);
+                color: $grayMain;
+            }
+            &:hover {
+
+            }
+        }
+        &__bg {
+            position: absolute;
+            z-index: -10;
+            background: $bgGenreList;
+            width: 416px;
+            height: 710px;
+        }
+    }
+    &__circle {
+        position: absolute;
+        top: 155px;
+        left: 310px;
+        width: 6px;
+        height: 6px;
+        background: $purpleMain;
+        border-radius: 50%;
+        transition: .3s;
+    }
 }
