@@ -11,7 +11,6 @@ const sliderDots = document.querySelector('.slider-dots');
 const sliderBlock = document.querySelectorAll('.slider-block');
 const listBlock = document.querySelector('.books-list');
 const circle = document.querySelector('.books__circle');
-const listItems = document.querySelectorAll('.books-list__item');
 const cards = document.querySelector('.books-cards');
 
 const genreList = new GenreList(genreData, listBlock, circle);
@@ -19,6 +18,15 @@ const slider = new Slider(sliderDots, sliderBlock);
 const fetchData = new FetchBooks(API_KEY, 'Architecture');
 let jsonData;
 let bookCards;
+
+
+genreList.createList();
+const listItems = document.querySelectorAll('.books-list__item');
+
+setTimeout(() => {
+  genreList.setListener(listItems);
+}, 500);
+
 const getJsonData = async() => {
   jsonData = await fetchData.fetchData();
   
@@ -37,7 +45,5 @@ setTimeout(() => {
 slider.initDots();
 slider.sliderInterval();
 
-genreList.createList();
-genreList.setListener(listItems);
 
 bookCards.createCard();

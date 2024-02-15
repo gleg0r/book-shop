@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         gap: 23px;
-        padding: 45px 89px 50px 165px;
+        padding: 45px 100px 50px 165px;
         &__item {
             @include fontFamily;
             @include fontStyle(12px, 500);
@@ -21,6 +21,7 @@
             text-transform: capitalize;
             transition: .3s;
             cursor: pointer;
+            width: 200px;
             &.active {
                 @include fontStyle(16px, 700);
                 color: $grayMain;
@@ -46,5 +47,82 @@
         background: $purpleMain;
         border-radius: 50%;
         transition: .3s;
+    }
+    &-cards {
+        &__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 424px;
+            height: fit-content;
+            gap: 36px;
+        }
+        &__img {
+            width: 212px;
+            height: 300px;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            gap: 16px;
+        }
+        &__title {
+            @include fontFamily();
+            @include fontStyle(16px, 700);
+            color: $grayMain;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+        &__author {
+            @include secondFamily();
+            @include fontStyle(10px, 400);
+            color: $graySub;
+            line-height: 14px;
+            letter-spacing: 0%;
+            text-align: left;
+            text-transform: capitalize;
+        }
+        &__desc {
+            @include secondFamily();
+            @include fontStyle(10px, 400);
+            color: $graySub;
+            line-height: 14px;
+            letter-spacing: 0%;
+            text-align: left;
+            text-transform: capitalize;
+        }
+        &__sale {
+            @include fontFamily();
+            @include fontStyle(13px, 700);
+            color: $grayMain;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+        &__buyBtn {
+            white-space: nowrap;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            box-sizing: border-box;
+            border: 1px solid $blueColor;
+            @include fontFamily;
+            @include fontStyle(8px, 700);
+            color: $blueColor;
+            line-height: 10px;
+            letter-spacing: 0%;
+            text-align: left;
+            text-transform: uppercase;
+            padding: 18px 66px 17px 67px;
+            cursor: pointer ;
+            transition: .3s;
+            &:hover {
+                background: $blueColor;
+                color: #FFFFFF;
+            }
+        }
     }
 }

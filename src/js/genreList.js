@@ -15,6 +15,7 @@ export default class GenreList {
   }
 
   moveCircle(index) {
+    console.log(index);
     const k = 38;
     this.circle.style.transform = `translateY(${k*index}px)`;
   }
