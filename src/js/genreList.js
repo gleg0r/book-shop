@@ -1,9 +1,10 @@
 export default class GenreList {
-  constructor(data, listBlock, circle) {
+  constructor(BookCards, data, listBlock, circle) {
     this.data = data;
     this.listBlock = listBlock;
     this.circle = circle;
     this.activeIndex = 0;
+    this.bookCards = BookCards;
   }
 
   createList() {
@@ -15,7 +16,6 @@ export default class GenreList {
   }
 
   moveCircle(index) {
-    console.log(index);
     const k = 38;
     this.circle.style.transform = `translateY(${k*index}px)`;
   }
@@ -31,10 +31,16 @@ export default class GenreList {
   }
 
   setListener(items) {
-    items.forEach(el => {
+    items.forEach((el, index) => {
       el.addEventListener('click', () => {
         this.activeIndex = +el.dataset.index;
         this.setActive(items);
+        async function newData(bookCards, index) {
+          await bookCards.setGenreIndex(index);
+          await bookCards.fetchData();
+          await bookCards.createCard();
+        }
+        newData(this.bookCards, index);
       });
     });
   }

@@ -9,13 +9,17 @@
 
 body {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  width: 1440px;
 }
 
 .header {
@@ -23,7 +27,19 @@ main {
   width: 100%;
   height: 112px;
   gap: 243px;
-
+  background: #fff;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  @media (max-width: 1170px) {
+    gap: 180px;
+  }
+  @media (max-width: 1000px) {
+    gap: 100px;
+  }
+  @media (max-width: 800px) {
+    gap: 20px;
+  }
   &__title {
     @include fontFamily;
     @include fontStyle(24px, 700);
@@ -34,17 +50,24 @@ main {
     display: flex;
     gap: 40px;
     list-style-type: none;
-
+    @media (max-width: 680px) {
+      display: none;
+    }
     &__item {
       @include fontFamily;
       @include fontStyle(10px, 900);
       text-transform: uppercase;
-      color: $graySub;
-      transition: .3s;
       cursor: pointer;
-
-      &:hover {
-        color: $grayMain;
+      &>a {
+        text-decoration: none;
+        color: $graySub;
+        transition: .3s;
+        &:hover {
+          color: $grayMain;
+        }
+        &.active {
+          color: $grayMain;
+        }
       }
 
       &.active {
@@ -101,10 +124,25 @@ main {
     background-color: transparent;
     background: url('../assets/images/icons/cart.svg');
     transition: .3s;
-
+    position: relative;
     &:hover {
       transform: scale(1.1);
     }
+  }
+  &__badge {
+    display: none;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    @include fontFamily;
+    @include fontStyle(10px, 500);
+    color: #fff;
+    line-height: 12px;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 1px 4px;
+    border-radius: 50%;
+    background: $badgeColor;
   }
 }
 
@@ -126,6 +164,9 @@ main {
   height: fit-content;
   gap: 17px;
   position: relative;
+  @media (max-width: 1000px) {
+    display: none;
+  }
   &-block {
     width: 100%;
     @include flexCenter;
@@ -140,6 +181,14 @@ main {
       width: 1120px;
       height: 702px;
       z-index: -1000;
+      @media (max-width: 1150px){
+        width: calc(1120px - 10%);
+        height: calc(702px - 10%);
+      }
+      @media (max-width: 1000px){
+        width: calc(1120px - 20%);
+        height: calc(702px - 20%);
+      }
     }
 
     &__subtitle {
@@ -240,6 +289,9 @@ main {
       @include promoStyle(164px, $purpleLight);
       top: 81px;
       right: 74px;
+      @media (max-width: 1270px) {
+        display: none;
+      }
     }
     &__rose {
       @include promoStyle(233px, $pinkColor);
@@ -247,6 +299,9 @@ main {
       right: 0;
       padding-right: 47px;
       padding-left: 21px;
+      @media (max-width: 1460px) {
+        display: none;
+      }
     }
     &__title {
       color: rgb(28, 42, 57);
