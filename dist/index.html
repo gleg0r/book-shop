@@ -1,32 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,900&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Bookshop</title>
 <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+
 <body>
-    <header class="header">
-        <h1 class="header__title">Bookshop </h1>
-        <nav class="header__nav">
-          <ul class="header-list">
-            <li class="header-list__item-active">books</li>
-            <li class="header-list__item">audiobooks</li>
-            <li class="header-list__item">Stationery & gifts</li>
-            <li class="header-list__item">blog</li>
-          </ul>
-        </nav>
-        <div class="header__menu">
-          <button class="header__profile"></button>
-          <button class="header__search"></button>
-          <button class="header__cart"></button>
-        </div>
-      </header>
-      <main>
-        <div class="slider">
-          
-        </div>
-      </main>
+  <header class="header">
+    <h1 class="header__title">Bookshop </h1>
+    <nav class="header__nav">
+      <ul class="header-list">
+        <li class="header-list__item active"><a class="active" href="">books</a></li>
+        <li class="header-list__item"><a href="">audiobooks</a></li>
+        <li class="header-list__item"><a href="">Stationery & gifts</a></li>
+        <li class="header-list__item"><a href="">blog</a></li>
+      </ul>
+    </nav>
+    <div class="header__menu">
+      <button class="header__profile"></button>
+      <button class="header__search"></button>
+      <button class="header__cart">
+        <span class="header__badge">0</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="slider">
+      <div class="slider-promo__purple">
+        <h3 class="slider-promo__title">Change old book on new</h3>
+        <img 
+          class="slider-promo__arrow"
+          src="18c805ce4e1f49bf2f35.svg"
+          alt="arrow"/>
+      </div>
+      <div class="slider-promo__rose">
+        <h3 class="slider-promo__title-pink">top 100 books 2022</h3>
+        <img 
+          class="slider-promo__arrow"
+          src="18c805ce4e1f49bf2f35.svg"
+          alt="arrow"/>
+      </div>
+      <div class="slider-block" data-index="1">
+        <img
+          class="slider-block__img"
+          src="d7b419d7701eb72327ab.png"
+          alt="banner">
+        <h1 class="slider-block__subtitle">Black friday sale</h1>
+        <h2 class="slider-block__title">up to</h2>
+        <h2 class="slider-block__title accent">60</h2>
+        <h2 class="slider-block__title percent">%</h2>
+      </div>
+      <div class="slider-block disabled" data-index="2">
+        <img
+          class="slider-block__img"
+          src="5f190f00b41d03feda9f.png"
+          alt="banner" />
+        <h1 class="slider-block__subtitle n2">for entrepreneurs</h1>
+        <h2 class="slider-block__title n2">top</h2>
+        <h2 class="slider-block__title accent n2">10</h2>
+        <h2 class="slider-block__title percent n2">books</h2>
+      </div>
+      <div class="slider-block disabled" data-index="3">
+        <img 
+          class="slider-block__img"
+          src="06d1511402a11b6351d1.png"
+          alt="banner">
+        <h1 class="slider-block__subtitle n3">Check out</h1>
+        <h2 class="slider-block__title n3">OUR <br /> cozy books <br /> Selection</h2>
+      </div>
+      <div class="slider-dots">
+        <div class="slider-dots__dot active" data-index="1"></div>
+        <div class="slider-dots__dot" data-index="2"></div>
+        <div class="slider-dots__dot" data-index="3"></div>
+      </div>
+    </div>
+    <div class="books">
+      <div class="books-list__bg"></div>
+      <ul class="books-list"></ul>
+      <div class="books__circle"></div>
+      <div class="books-cards"></div>
+    </div>
+  </main>
 </body>
 </html>
